@@ -41,3 +41,6 @@ nosetests.xml
 
 # PyInstaller
 *.spec
+
+# Hadith DB (came from dev branch of hadithunlocked)
+data/*
