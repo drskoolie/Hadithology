@@ -1,0 +1,33 @@
+[project]
+name = "alpykhari" 
+version = "0.1.0"
+description = "Al-Pykhari"
+authors = [{ name = "Al-Baraa El-Hag" }]
+requires-python = ">=3.12"
+
+dependencies = [
+	"fastapi[standard]",
+	"sqlmodel",
+	"types-networkx",
+	"networkx",
+	"pysqlite3",
+	]
+
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+package-dir = {"" = "backend"}
+packages = ["alpykhari"]
+
+# Testing
+[project.optional-dependencies]
+dev = ["pytest", "httpx", "mkdocs-material", "mypy"]
+terminal = ["ipython", "rich", "ipdb"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.mypy]
+strict = true
